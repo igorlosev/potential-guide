@@ -1,0 +1,12 @@
+        case .toggleGrid:
+            newState.isShowingGrid.toggle()
+            
+        case .togglePlayCollage:
+            newState.isPlayingCollage.toggle()
+        }
+protocol CollageReducerProtocol {
+    mutating func reduce(_ currentState: Collage,
+                         _ action: CollageModification) -> Collage
+}
+
+struct CollageReducer: CollageReducerProtocol {
